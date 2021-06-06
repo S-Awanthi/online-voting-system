@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 12, 2020 at 06:07 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jun 06, 2021 at 06:09 PM
+-- Server version: 8.0.18
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -26,13 +28,22 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
-  `admin_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `admin_id` int(11) NOT NULL AUTO_INCREMENT,
   `adminname` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `firstname` varchar(100) NOT NULL,
-  `lastname` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `lastname` varchar(100) NOT NULL,
+  PRIMARY KEY (`admin_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `adminname`, `password`, `firstname`, `lastname`) VALUES
+(1, 'Admin', 'e10adc3949ba59abbe56e057f20f883e', 'Test', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -40,15 +51,24 @@ CREATE TABLE `admin` (
 -- Table structure for table `candidate`
 --
 
-CREATE TABLE `candidate` (
-  `candidate_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `candidate`;
+CREATE TABLE IF NOT EXISTS `candidate` (
+  `candidate_id` int(11) NOT NULL AUTO_INCREMENT,
   `designation` varchar(100) NOT NULL,
   `firstname` varchar(100) NOT NULL,
   `lastname` varchar(100) NOT NULL,
   `yearOfStudy` varchar(100) NOT NULL,
   `gender` varchar(100) NOT NULL,
-  `prof_image` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `prof_image` varchar(100) NOT NULL,
+  PRIMARY KEY (`candidate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `candidate`
+--
+
+INSERT INTO `candidate` (`candidate_id`, `designation`, `firstname`, `lastname`, `yearOfStudy`, `gender`, `prof_image`) VALUES
+(1, 'President', 'Testing', 'Candidate', '4th Year', 'Female', 'upload/pngtree-user-vector-avatar-png-image_1541962.jpg');
 
 -- --------------------------------------------------------
 
@@ -56,11 +76,25 @@ CREATE TABLE `candidate` (
 -- Table structure for table `vote`
 --
 
-CREATE TABLE `vote` (
-  `vote_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `vote`;
+CREATE TABLE IF NOT EXISTS `vote` (
+  `vote_id` int(11) NOT NULL AUTO_INCREMENT,
   `candidate_id` varchar(255) NOT NULL,
-  `voter_id` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `voter_id` varchar(255) NOT NULL,
+  PRIMARY KEY (`vote_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vote`
+--
+
+INSERT INTO `vote` (`vote_id`, `candidate_id`, `voter_id`) VALUES
+(1, '1', '3'),
+(2, '', '3'),
+(3, '', '3'),
+(4, '', '3'),
+(5, '', '3'),
+(6, '', '3');
 
 -- --------------------------------------------------------
 
@@ -68,69 +102,28 @@ CREATE TABLE `vote` (
 -- Table structure for table `voter`
 --
 
-CREATE TABLE `voter` (
-  `voter_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `voter`;
+CREATE TABLE IF NOT EXISTS `voter` (
+  `voter_id` int(11) NOT NULL AUTO_INCREMENT,
   `NIC_number` varchar(10) NOT NULL,
   `password` varchar(100) NOT NULL,
   `firstname` varchar(100) NOT NULL,
   `lastname` varchar(100) NOT NULL,
   `yearOfStudy` varchar(100) NOT NULL,
   `status` varchar(100) NOT NULL,
-  `account` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `account` varchar(100) NOT NULL,
+  PRIMARY KEY (`voter_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `voter`
 --
 
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`admin_id`);
+INSERT INTO `voter` (`voter_id`, `NIC_number`, `password`, `firstname`, `lastname`, `yearOfStudy`, `status`, `account`) VALUES
+(1, '854125145V', '123456', 'Test', 'Voter', '2nd Year', 'Unvoted', 'Active'),
+(3, '925865233V', '123456', 'John', 'Smith', '3rd Year', 'Voted', 'Active');
+COMMIT;
 
---
--- Indexes for table `candidate`
---
-ALTER TABLE `candidate`
-  ADD PRIMARY KEY (`candidate_id`);
-
---
--- Indexes for table `vote`
---
-ALTER TABLE `vote`
-  ADD PRIMARY KEY (`vote_id`);
-
---
--- Indexes for table `voter`
---
-ALTER TABLE `voter`
-  ADD PRIMARY KEY (`voter_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `candidate`
---
-ALTER TABLE `candidate`
-  MODIFY `candidate_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `vote`
---
-ALTER TABLE `vote`
-  MODIFY `vote_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `voter`
---
-ALTER TABLE `voter`
-  MODIFY `voter_id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
