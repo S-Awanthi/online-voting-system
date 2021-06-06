@@ -42,7 +42,7 @@
                                         <th>Usernname</th>
                                         <th>First Name</th>
                                         <th>Last Name</th>
-                                        <th>Action</th>
+                                        <th style="text-align:center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -59,7 +59,7 @@
                                             <td><?php echo $row ['adminname']; ?></td>
                                             <td><?php echo $row ['firstname']; ?></td>
                                             <td><?php echo $row ['lastname']; ?></td>
-                                            <td style="text-align:left">
+                                            <td style="text-align:center">
                                                 
                                                 <a rel="tooltip"  title="Delete" id="<?php echo $admin_id; ?>" href="#delete_user<?php echo $admin_id; ?>" data-target="#delete_user<?php echo $admin_id ?>" data-toggle="modal"class="btn btn-danger btn-outline">
                                                     <i class="fa fa-trash-o"></i> Delete</a>

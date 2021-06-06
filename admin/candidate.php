@@ -42,7 +42,7 @@
                                         <th>Year Of Study</th>
                                         <th>Gender</th>
                                         <th>Image</th>
-                                        <th>Action</th>
+                                        <th style="text-align:center">Action</th>
                                     </tr>
                                 </thead>
 

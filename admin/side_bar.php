@@ -52,7 +52,7 @@
                             <a href="voters.php"><i class = "fa fa-user fa-fw"></i> View Voters</a>
                         </li>
                         <li>
-                            <a href="../register/index.php"><i class = "fa fa-user fa-fw"></i> Add Voters</a>
+                            <a href="../register/index.php"><i class = "fa fa-user fa-fw"></i> Add Voter</a>
                         </li>
                     </ul>                    
                 </li>
