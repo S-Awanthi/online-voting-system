@@ -20,7 +20,7 @@
         }
         
         if($voted == 1){
-            echo "<br><center><font color= 'red' size='4'>You Can Vote Only One Time</center></font>";
+            echo "<br><center><font color= 'red' size='4'>You already voted!</center></font>";
         }
         else{
             echo " <br><center><font color= 'red' size='4'>Invalid Username / Password</center></font>";

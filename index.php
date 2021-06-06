@@ -30,8 +30,10 @@
 					</fieldset>
 							
 				<?php include ('login_query.php');?>
-                        </form>
-                        <h5><b>Note:</b> <i>You have already voted! You cannot vote again!</i> </h5>
+                        </form><br>
+                        <h5><b>Note:</b> <i>You can vote only once</i> <br><br>
+                            <i style="margin-left:40px;">You can only put one vote for one designation</i> <br><br>
+                            <i style="margin-left:40px; text-align:justify;">If you're willing to place vote for more than one designation, then do all votings within same login</i> </h5>
                     </div>
                 </div>
             </div>

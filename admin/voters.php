@@ -46,9 +46,9 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
+                                        <th>ID</th>
                                         <th>NIC Number</th>
-                                        <th>Password</th>
-                                        <th>Name</th>
+                                        <th>Full Name</th>
                                         <th>Year Of Study</th>
                                         <th>Status</th>
                                         <th>Account</th>
@@ -65,8 +65,8 @@
                                         ?>
 
                                         <tr>
+                                            <td><?php echo $row1 ['voter_id']; ?></td>
                                             <td><?php echo $row1 ['NIC_number']; ?></td>
-                                            <td><?php echo $row1 ['password']; ?></td>
                                             <td><?php echo $row1 ['firstname'] . " " . $row1 ['lastname']; ?></td>
                                             <td><?php echo $row1 ['yearOfStudy']; ?></td>
                                             <td><?php echo $row1 ['status']; ?></td>

@@ -36,6 +36,7 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
+                                        <th>ID</th>
                                         <th>Designation</th>
                                         <th>First Name</th>
                                         <th>Last Name</th>
@@ -58,6 +59,7 @@
                                             $candidate_id = $row['candidate_id'];
                                             ?>
 
+                                            <td><?php echo $row ['candidate_id']; ?></td>
                                             <td><?php echo $row ['designation']; ?></td>
                                             <td><?php echo $row ['firstname']; ?></td>
                                             <td><?php echo $row ['lastname']; ?></td>
