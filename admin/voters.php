@@ -19,11 +19,11 @@
                 $count2 = $conn->query("SELECT COUNT(*) as total FROM voter WHERE status = 'Unvoted'")->fetch_array();
                 ?>
 
-                <a href="voters.php" class = "btn btn-primary btn-outline"><i class = "fa fa-paw"></i> 
-                    ALL Voters (<?php echo $count['total'] ?>)</a><br><br>
-                <a href="voted.php" class = "btn btn-success btn-outline"><i class = "fa fa-paw"></i> 
+                <a href="voters.php" class = "btn btn-primary btn-outline"><i class = "fa fa-comments"></i> 
+                    All Voters (<?php echo $count['total'] ?>)</a><br><br>
+                <a href="voted.php" class = "btn btn-success btn-outline"><i class = "fa fa-thumbs-up"></i> 
                     Voted (<?php echo $count1['total'] ?>)</a>
-                <a href="unvoted.php" class = "btn btn-danger btn-outline"><i class = "fa fa-paw"></i> 
+                <a href="unvoted.php" class = "btn btn-danger btn-outline"><i class = "fa fa-thumbs-down"></i> 
                     Unvoted (<?php echo $count2['total'] ?>) </a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
                 <br/>
@@ -34,7 +34,7 @@
                         <h4 class="modal-title" id="myModalLabel">         
                             <div class="panel panel-primary">
                                 <div class="panel-heading"><i class = "fa fa-users"></i>
-                                    Voters List
+                                    All Voters List
                                 </div>    
                             </div>
                         </h4>

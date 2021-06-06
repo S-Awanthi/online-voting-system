@@ -7,26 +7,26 @@
             <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="" style = "color:white; font-size: 25px"><i class = "fa fa-home fa-large" > </i> Online Voting System</a>
+        <a class="navbar-brand" href="" style = "color:white; font-size: 25px"><i class = "fa fa-spinner fa-large" > </i> Online Voting System</a>
     </div>
 
-<ul class="nav navbar-top-links navbar-right">
+    <ul class="nav navbar-top-links navbar-right">
 
         <?php
-        require 'db_connection.php';
-        $query = $conn->query("SELECT * from admin where admin_id ='$session_id'")or die(mysql_error());
+            require 'db_connection.php';
+            $query = $conn->query("SELECT * from admin where admin_id ='$session_id'")or die(mysql_error());
 
-        while ($row = $query->fetch_array()) {
-            ?>
+            while ($row = $query->fetch_array()) {
+                ?>
 
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color: white; font-size: 17px;">
-                    <i class="fa fa-user"></i><?php echo $user_username = " " .$user_row['firstname'] . " " . $user_row['lastname']; ?>
-                </a>
-            </li>
-        </ul>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color: black; font-size: 17px;">
+                        <i class="fa fa-user"></i><?php echo $user_username = " " .$user_row['firstname'] . " " . $user_row['lastname']; ?>
+                    </a>
+                </li>
+    </ul>
 
-    <?php } ?>
+        <?php } ?>
     <!-- /.navbar-top-links -->
 
     <div class="navbar-default sidebar" role="navigation">
@@ -34,7 +34,7 @@
             <ul class="nav" id="side-menu">
 
                 <li>
-                    <a href=""><i class="fa fa-menu fa-fw"></i>Menu </a>
+                    <a href=""><i class="fa fa-menu fa-fw"></i> Menu </a>
                 </li>
 
                 <li>
@@ -62,7 +62,7 @@
                 </li>
                 
                 <li>
-                    <a href="logout.php"> <i class = "fa fa-sign-out" ></i>Logout</a>                        
+                    <a href="logout.php"> <i class = "fa fa-sign-out" ></i> Logout</a>                        
                 </li>
 
             </ul>

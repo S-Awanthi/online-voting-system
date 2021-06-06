@@ -15,7 +15,7 @@
                 
                 <br>
 
-                <button style="font-size: 15px;" class="btn btn-primary btn-primary" data-toggle="modal" data-target="#add_user"><i class = "fa fa-asterisk"></i>Add New System Admin</button>
+                <button style="font-size: 15px;" class="btn btn-primary btn-primary" data-toggle="modal" data-target="#add_user"><i class = "fa fa-plus-circle"></i> Add New System Admin</button>
                 
                 <?php include ('add_user_modal.php'); ?>
                 

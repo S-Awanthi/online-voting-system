@@ -10,8 +10,7 @@
 
     </div>
 
-
-    
+       
     <!-- /.navbar-top-links -->
 
     <div class="navbar-default sidebar" role="navigation">
@@ -19,23 +18,23 @@
             <ul class="nav" id="side-menu">
 
                 <li>
-                    <a href="candidate.php"><i class="fa fa-menu fa-fw"></i>Menu </a>
+                    <a href=""><i class="fa fa-menu fa-fw"></i> Menu </a>
                 </li>
 
                 <li>
-                    <a href="user.php"><i class="fa fa-user fa-fw"></i> Admin </a>
+                    <a href="../admin/user.php"><i class="fa fa-user fa-fw"></i> Admin </a>
                     
                 </li>
                 
                 <li>
-                    <a href="candidate.php"><i class="fa fa-users fa-fw"></i> Candidates <span class=""></span></a>
+                    <a href="../admin/candidate.php"><i class="fa fa-users fa-fw"></i> Candidates <span class=""></span></a>
                    
                 </li>
                 <li>
                     <a href="voters.php"><i class="fa fa-users"></i> Voters<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="voters.php"><i class = "fa fa-user fa-fw"></i> View Voters</a>
+                            <a href="../admin/voters.php"><i class = "fa fa-user fa-fw"></i> View Voters</a>
                         </li>
                         <li>
                             <a href="../register/index.php"><i class = "fa fa-user fa-fw"></i> Add Voters</a>
@@ -44,11 +43,11 @@
                 </li>
 
                 <li>
-                    <a href="canvassing.php"><i class="fa fa-download fa-fw"></i> Canvassing Report</a>
+                    <a href="../admin/canvassing.php"><i class="fa fa-download fa-fw"></i> Canvassing Report</a>
                 </li>
                
                 <li>
-                    <a href="logout.php"> <i class = "fa fa-sign-out" ></i>Logout</a>                        
+                    <a href="../admin/logout.php"> <i class = "fa fa-sign-out" ></i> Logout</a>                        
                 </li>
 
             </ul>

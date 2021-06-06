@@ -13,7 +13,7 @@
             <div class="row">
                 
             <br>
-            <button style="font-size: 15px;" class="btn btn-primary btn-primary" data-toggle="modal" data-target="#myModal"><i class = "fa fa-asterisk"></i> Add New Candidate</button>
+            <button style="font-size: 15px;" class="btn btn-primary btn-primary" data-toggle="modal" data-target="#myModal"><i class = "fa fa-plus-circle"></i> Add New Candidate</button>
 
                 <?php include ('add_candidate_modal.php'); ?>
                 
@@ -24,7 +24,7 @@
                         <h4 class="modal-title" id="myModalLabel">         
                             <div class="panel panel-primary">
                                 <div class="panel-heading"><i class = "fa fa-users"></i>
-                                    Candidates List
+                                    Candidate List
                                 </div>    
                             </div>
                         </h4>
